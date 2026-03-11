@@ -5,52 +5,77 @@
   <title>Алина Алая – терапия творчеством, арт‑прогулки и скетчинг</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Терапия творчеством, арт‑прогулки и скетчинг в Льорет‑де‑Мар и онлайн. Алина Алая – психолог, арт‑терапевт и художница." />
-  <!-- Шрифты -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <!-- Шрифты: мягкий гротеск + теплый сериф -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&family=Fraunces:wght@500;600&display=swap" rel="stylesheet">
   <!-- Иконки -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     :root {
-      --bg-main: #f4efe6;
-      --bg-alt: #f8f3eb;
-      --text-main: #2b2723;
-      --accent: #245d63;
-      --accent-soft: #c18f4a;
-      --muted: #8a8175;
-      --white: #ffffff;
-      --shadow-soft: 0 14px 40px rgba(0,0,0,0.08);
+      /* мягкая, некислотная палитра */
+      --bg-page: #f7f4ef;        /* основной фон */
+      --bg-panel: #ffffff;       /* карточки */
+      --bg-muted: #eef1ec;       /* мягкая подложка */
+      --text-main: #282622;
+      --text-soft: #68635c;
+      --accent: #63756b;         /* мягкий зелёно‑серый */
+      --accent-light: #9aac9f;
+      --accent-warm: #e39a7a;    /* тёплый акцент (кнопки) */
+      --border-subtle: #e0ddd6;
+      --shadow-soft: 0 14px 40px rgba(0,0,0,0.06);
       --radius-lg: 18px;
-      --radius-md: 12px;
+      --radius-md: 14px;
       --radius-sm: 8px;
-      --max-width: 1120px;
+      --max-width: 1040px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: 'Work Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text-main);
-      background-color: var(--bg-main);
-      line-height: 1.6;
+      background: radial-gradient(circle at top left, #fdf8f0 0, #f7f4ef 55%, #f3f2ee 100%);
+      line-height: 1.7;
     }
 
-    img { max-width: 100%; display: block; }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     h1, h2, h3 {
-      font-family: 'Playfair Display', "Times New Roman", serif;
+      font-family: 'Fraunces', "Times New Roman", serif;
       margin-top: 0;
       color: var(--text-main);
     }
 
-    h1 { font-size: clamp(2.1rem, 3vw, 2.8rem); line-height: 1.15; }
-    h2 { font-size: 1.9rem; margin-bottom: 0.3rem; }
-    h3 { font-size: 1.25rem; }
+    h1 {
+      font-size: clamp(2.2rem, 3vw, 2.8rem);
+      line-height: 1.15;
+      letter-spacing: 0.01em;
+    }
 
-    p { margin: 0 0 0.8rem; }
+    h2 {
+      font-size: 1.9rem;
+      margin-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-size: 1.24rem;
+    }
+
+    p {
+      margin: 0 0 0.9rem;
+      font-size: 0.98rem;
+    }
 
     .wrapper {
       max-width: var(--max-width);
@@ -59,26 +84,29 @@
     }
 
     section {
-      padding: 80px 0 40px;
-      border-bottom: 1px solid rgba(0,0,0,0.03);
+      padding: 72px 0 40px;
+      border-bottom: 1px solid var(--border-subtle);
     }
 
-    .section-header { margin-bottom: 24px; }
+    .section-header {
+      margin-bottom: 24px;
+    }
 
     .section-kicker {
       text-transform: uppercase;
       letter-spacing: 0.12em;
       font-size: 0.78rem;
-      color: var(--muted);
+      color: var(--text-soft);
       margin-bottom: 6px;
     }
 
+    /* Шапка */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background-color: rgba(244,239,230,0.96);
-      backdrop-filter: blur(12px);
+      background-color: rgba(247,244,239,0.96);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(0,0,0,0.03);
     }
 
@@ -92,229 +120,315 @@
       gap: 24px;
     }
 
-    .nav-logo { display: flex; flex-direction: column; gap: 2px; }
-    .nav-logo-main { font-family:'Playfair Display',serif; font-weight:600; font-size:1.3rem; }
-    .nav-logo-sub { font-size:0.8rem; color:var(--muted); }
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .nav-logo-main {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-logo-sub {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
 
     .nav-links {
-      display:flex;
-      gap:18px;
-      align-items:center;
-      font-size:0.9rem;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      font-size: 0.9rem;
     }
 
     .nav-links a {
-      padding:6px 0;
-      position:relative;
+      padding: 4px 0;
+      position: relative;
+      color: var(--text-soft);
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
     }
 
     .nav-links a::after {
-      content:"";
-      position:absolute;
-      left:0;
-      bottom:0;
-      width:0;
-      height:2px;
-      background-color:var(--accent);
-      transition:width 0.22s ease;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 1.5px;
+      background-color: var(--accent);
+      transition: width 0.22s ease;
     }
 
-    .nav-links a:hover::after { width:100%; }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
     .nav-cta {
-      padding:7px 14px;
-      border-radius:999px;
-      border:1px solid var(--accent);
-      color:var(--accent);
-      font-size:0.85rem;
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: rgba(238,241,236,0.6);
     }
 
-    .nav-toggle { display:none; font-size:1.4rem; cursor:pointer; }
+    .nav-toggle {
+      display: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--text-main);
+    }
 
-    @media (max-width:860px){
-      .nav-links{display:none;}
-      .nav-toggle{display:block;}
-      .nav-open .nav-links{
-        display:flex;
-        position:absolute;
-        top:56px;
-        right:12px;
-        left:12px;
-        flex-direction:column;
-        padding:12px 16px 10px;
-        background-color:var(--bg-main);
-        border-radius:16px;
-        box-shadow:var(--shadow-soft);
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+      .nav-toggle {
+        display: block;
+      }
+      .nav-open .nav-links {
+        display: flex;
+        position: absolute;
+        top: 56px;
+        right: 16px;
+        left: 16px;
+        flex-direction: column;
+        padding: 12px 16px 10px;
+        background-color: var(--bg-page);
+        border-radius: 16px;
+        box-shadow: var(--shadow-soft);
+      }
+      .nav-open .nav-links a {
+        padding: 6px 0;
       }
     }
 
+    /* Кнопки */
     .btn {
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:12px 20px;
-      border-radius:999px;
-      border:none;
-      cursor:pointer;
-      font-size:0.95rem;
-      font-weight:500;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 500;
     }
 
     .btn-primary {
-      background-color:var(--accent);
-      color:var(--white);
-      box-shadow:var(--shadow-soft);
+      background-color: var(--accent-warm);
+      color: #fff7f2;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.08);
     }
-    .btn-primary:hover{background-color:#1b464a;}
+
+    .btn-primary:hover {
+      background-color: #d38461;
+    }
 
     .btn-outline {
-      background-color:transparent;
-      border:1px solid var(--accent);
-      color:var(--accent);
+      background-color: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
     }
 
-    #hero { padding-top:72px; }
-
-    .hero-inner{
-      display:grid;
-      grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
-      gap:32px;
-      align-items:center;
+    /* HERO */
+    #hero {
+      padding-top: 80px;
     }
 
-    .hero-location{font-size:0.9rem;color:var(--muted);margin-top:8px;}
-
-    .hero-photo{
-      border-radius:var(--radius-lg);
-      overflow:hidden;
-      box-shadow:var(--shadow-soft);
-      background-color:#e4e0d7;
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
     }
 
-    .hero-photo img{width:100%;height:100%;object-fit:cover;}
-
-    .hero-actions{margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;}
-
-    @media(max-width:860px){
-      .hero-inner{grid-template-columns:1fr;}
+    .hero-tag {
+      font-size: 0.82rem;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(99,117,107,0.35);
+      background-color: rgba(238,241,236,0.6);
+      margin-bottom: 10px;
     }
 
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:5px 12px;
-      border-radius:999px;
-      background-color:rgba(36,93,99,0.06);
-      color:var(--accent);
-      font-size:0.78rem;
-      margin-bottom:10px;
+    .hero-location {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      margin-top: 8px;
     }
 
-    .muted{color:var(--muted);}
-    .bg-alt{background-color:var(--bg-alt);}
-
-    .cards-3{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:20px;
+    .hero-photo {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      background-color: #e9e4da;
     }
 
-    .card{
-      background-color:var(--white);
-      border-radius:var(--radius-md);
-      padding:18px 18px 16px;
-      box-shadow:0 12px 30px rgba(0,0,0,0.03);
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .card h3{margin-bottom:6px;}
-    .card p{font-size:0.94rem;}
-
-    @media(max-width:900px){
-      .cards-3{grid-template-columns:1fr;}
+    .hero-actions {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
     }
 
-    .quote-block{
-      background-color:#e6f0ee;
-      border-radius:var(--radius-lg);
-      padding:32px 28px;
-      position:relative;
-      overflow:hidden;
+    @media (max-width: 860px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
     }
 
-    .quote-block::before{
-      content:"“";
-      position:absolute;
-      font-family:'Playfair Display',serif;
-      font-size:5rem;
-      color:rgba(36,93,99,0.15);
-      top:-22px;
-      left:20px;
+    .muted {
+      color: var(--text-soft);
     }
 
-    .quote-block p{position:relative;z-index:1;}
-
-    .check-list{
-      list-style:none;
-      padding:0;
-      margin:0;
-      display:grid;
-      gap:8px;
+    .bg-muted {
+      background-color: var(--bg-muted);
     }
 
-    .check-list li{
-      display:flex;
-      align-items:flex-start;
-      gap:10px;
-      font-size:0.96rem;
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
     }
 
-    .check-list i{
-      color:var(--accent);
-      margin-top:4px;
-      font-size:0.85rem;
+    .card {
+      background-color: var(--bg-panel);
+      border-radius: var(--radius-md);
+      padding: 20px 18px 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+      border: 1px solid #ebe7df;
     }
 
-    .gallery-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:16px;
+    .card h3 {
+      margin-bottom: 6px;
     }
 
-    .gallery-row img{
-      border-radius:12px;
-      object-fit:cover;
-      flex:1 1 150px;
-      max-height:180px;
+    .card p {
+      font-size: 0.95rem;
     }
 
-    form{display:grid;gap:12px;margin-top:16px;}
-
-    label{font-size:0.9rem;font-weight:500;}
-
-    input,textarea,select{
-      width:100%;
-      padding:9px 11px;
-      border-radius:8px;
-      border:1px solid #c9c0b5;
-      font-family:inherit;
-      font-size:0.95rem;
-      background-color:#fdfaf5;
+    @media (max-width: 900px) {
+      .cards-3 {
+        grid-template-columns: 1fr;
+      }
     }
 
-    textarea{min-height:100px;resize:vertical;}
+    .quote-block {
+      background: linear-gradient(135deg, #eef1ec, #f5efe8);
+      border-radius: var(--radius-lg);
+      padding: 30px 26px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(152,166,157,0.35);
+    }
 
-    footer{
-      border-top:1px solid rgba(0,0,0,0.06);
-      padding:16px 20px 26px;
-      font-size:0.85rem;
-      color:var(--muted);
-      text-align:center;
+    .quote-block::before {
+      content: "“";
+      position: absolute;
+      font-family: 'Fraunces', serif;
+      font-size: 4.6rem;
+      color: rgba(99,117,107,0.16);
+      top: -10px;
+      left: 16px;
+    }
+
+    .quote-block p {
+      position: relative;
+      z-index: 1;
+      font-size: 0.98rem;
+    }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.96rem;
+    }
+
+    .check-list i {
+      color: var(--accent);
+      margin-top: 4px;
+      font-size: 0.85rem;
+    }
+
+    .gallery-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .gallery-row img {
+      border-radius: 14px;
+      object-fit: cover;
+      flex: 1 1 150px;
+      max-height: 190px;
+    }
+
+    form {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 9px 11px;
+      border-radius: 8px;
+      border: 1px solid #d6d0c7;
+      font-family: inherit;
+      font-size: 0.95rem;
+      background-color: #fbf8f3;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 16px 20px 26px;
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      text-align: center;
     }
   </style>
 </head>
@@ -332,7 +446,7 @@
       <a href="#walks">Арт‑прогулки</a>
       <a href="#sketching">Скетчинг и мастер‑классы</a>
       <a href="#contacts">Контакты</a>
-      <a href="#contacts" class="nav-cta"><i class="fa-regular fa-calendar"></i>Записаться</a>
+      <a href="#contacts" class="nav-cta"><i class="fa-regular fa-calendar"></i> Записаться</a>
     </div>
     <div class="nav-toggle" onclick="toggleNav()">
       <i class="fa-solid fa-bars"></i>
@@ -346,9 +460,9 @@
   <section id="hero">
     <div class="hero-inner">
       <div>
-        <div class="pill">
+        <div class="hero-tag">
           <i class="fa-solid fa-leaf"></i>
-          Терапия творчеством · арт‑прогулки · скетчинг
+          терапия творчеством · арт‑прогулки · скетчинг
         </div>
         <h1>Терапия творчеством, арт‑прогулки и скетчинг для тех, кто устал от экранов и хочет вернуться к себе</h1>
         <p>Я соединяю психологию, искусство и природу, чтобы помочь вам снизить стресс, мягко восстановить внимание и эмоциональные ресурсы и вернуть живой интерес к миру и к себе.</p>
@@ -363,7 +477,6 @@
         </div>
       </div>
       <div class="hero-photo">
-        <!-- основное фото в hero -->
         <img src="IMG_E0217.jpg" alt="Алина Алая с картинами на природе">
       </div>
     </div>
@@ -385,7 +498,7 @@
       </div>
       <div>
         <div class="gallery-row">
-          <img src="photo_2026-03-11_19-06-55.jpg" alt="Арт‑прогулка на природе">
+          <img src="photo_2026-03-11_19-06-55-2.jpg" alt="Групповая творческая работа с коллажами">
           <img src="IMG_1098.jpg" alt="Алина Алая с картиной в городе и природе">
         </div>
       </div>
@@ -393,7 +506,7 @@
   </section>
 
   <!-- Это для вас, если -->
-  <section class="bg-alt">
+  <section class="bg-muted">
     <div class="section-header">
       <div class="section-kicker">Кому подойдёт</div>
       <h2>Это для вас, если вы</h2>
@@ -427,7 +540,7 @@
       </div>
       <div class="card">
         <h3>Скетчинг и творческие мастер‑классы</h3>
-        <p>Скетчбук, зарисовки города и природы, интуитивная абстракция и авторские мастер‑классы без оценок и «правильно/неправильно».</p>
+        <p>Скетчбук, зарисовки города и природы, интуитивная абстракция и авторские мастер‑классы без оценок.</p>
         <button class="btn btn-outline" onclick="scrollToSection('sketching')">Подробнее</button>
       </div>
     </div>
@@ -485,7 +598,7 @@
       <div class="card">
         <h3>Абстракция и интуитивное рисование</h3>
         <p>Опираемся на цвет, ритм линии и ощущения в теле, чтобы мягко выражать сложные состояния.</p>
-        <img src="45.jpg" alt="Абстрактная живопись" style="border-radius:10px;margin-top:10px;">
+        <img src="41.jpg" alt="Светлая абстракция" style="border-radius:10px;margin-top:10px;">
       </div>
     </div>
 
@@ -572,7 +685,7 @@
       <div class="card">
         <h3>Интуитивная абстракция</h3>
         <p>Абстрактное и интуитивное рисование на основе цвета и движения руки – для исследования внутренних состояний.</p>
-        <img src="41.jpg" alt="Светлая абстракция с фактурами" style="border-radius:10px;margin-top:10px;">
+        <img src="45.jpg" alt="Абстрактная живопись" style="border-radius:10px;margin-top:10px;">
       </div>
       <div class="card">
         <h3>Этюды на природе</h3>
