@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Алина Алая – терапия творчеством, арт‑прогулки и скетчинг</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Терапия творчеством, арт‑прогулки и скетчинг в Льорет‑де‑Мар и онлайн. Алина Алая – психолог, арт‑терапевт и художница." />
+  <!-- Шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <!-- Иконки -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --bg-main: #f4efe6;
+      --bg-alt: #f8f3eb;
+      --text-main: #2b2723;
+      --accent: #245d63;
+      --accent-soft: #c18f4a;
+      --muted: #8a8175;
+      --white: #ffffff;
+      --shadow-soft: 0 14px 40px rgba(0,0,0,0.08);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      --max-width: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-main);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: inherit; text-decoration: none; }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', "Times New Roman", serif;
+      margin-top: 0;
+      color: var(--text-main);
+    }
+
+    h1 { font-size: clamp(2.1rem, 3vw, 2.8rem); line-height: 1.15; }
+    h2 { font-size: 1.9rem; margin-bottom: 0.3rem; }
+    h3 { font-size: 1.25rem; }
+
+    p { margin: 0 0 0.8rem; }
+
+    .wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    section {
+      padding: 80px 0 40px;
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .section-header { margin-bottom: 24px; }
+
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(244,239,230,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-logo { display: flex; flex-direction: column; gap: 2px; }
+    .nav-logo-main { font-family:'Playfair Display',serif; font-weight:600; font-size:1.3rem; }
+    .nav-logo-sub { font-size:0.8rem; color:var(--muted); }
+
+    .nav-links {
+      display:flex;
+      gap:18px;
+      align-items:center;
+      font-size:0.9rem;
+    }
+
+    .nav-links a {
+      padding:6px 0;
+      position:relative;
+    }
+
+    .nav-links a::after {
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0;
+      height:2px;
+      background-color:var(--accent);
+      transition:width 0.22s ease;
+    }
+
+    .nav-links a:hover::after { width:100%; }
+
+    .nav-cta {
+      padding:7px 14px;
+      border-radius:999px;
+      border:1px solid var(--accent);
+      color:var(--accent);
+      font-size:0.85rem;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    .nav-toggle { display:none; font-size:1.4rem; cursor:pointer; }
+
+    @media (max-width:860px){
+      .nav-links{display:none;}
+      .nav-toggle{display:block;}
+      .nav-open .nav-links{
+        display:flex;
+        position:absolute;
+        top:56px;
+        right:12px;
+        left:12px;
+        flex-direction:column;
+        padding:12px 16px 10px;
+        background-color:var(--bg-main);
+        border-radius:16px;
+        box-shadow:var(--shadow-soft);
+      }
+    }
+
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 20px;
+      border-radius:999px;
+      border:none;
+      cursor:pointer;
+      font-size:0.95rem;
+      font-weight:500;
+    }
+
+    .btn-primary {
+      background-color:var(--accent);
+      color:var(--white);
+      box-shadow:var(--shadow-soft);
+    }
+    .btn-primary:hover{background-color:#1b464a;}
+
+    .btn-outline {
+      background-color:transparent;
+      border:1px solid var(--accent);
+      color:var(--accent);
+    }
+
+    #hero { padding-top:72px; }
+
+    .hero-inner{
+      display:grid;
+      grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+      gap:32px;
+      align-items:center;
+    }
+
+    .hero-location{font-size:0.9rem;color:var(--muted);margin-top:8px;}
+
+    .hero-photo{
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      box-shadow:var(--shadow-soft);
+      background-color:#e4e0d7;
+    }
+
+    .hero-photo img{width:100%;height:100%;object-fit:cover;}
+
+    .hero-actions{margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;}
+
+    @media(max-width:860px){
+      .hero-inner{grid-template-columns:1fr;}
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:5px 12px;
+      border-radius:999px;
+      background-color:rgba(36,93,99,0.06);
+      color:var(--accent);
+      font-size:0.78rem;
+      margin-bottom:10px;
+    }
+
+    .muted{color:var(--muted);}
+    .bg-alt{background-color:var(--bg-alt);}
+
+    .cards-3{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background-color:var(--white);
+      border-radius:var(--radius-md);
+      padding:18px 18px 16px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.03);
+    }
+
+    .card h3{margin-bottom:6px;}
+    .card p{font-size:0.94rem;}
+
+    @media(max-width:900px){
+      .cards-3{grid-template-columns:1fr;}
+    }
+
+    .quote-block{
+      background-color:#e6f0ee;
+      border-radius:var(--radius-lg);
+      padding:32px 28px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .quote-block::before{
+      content:"“";
+      position:absolute;
+      font-family:'Playfair Display',serif;
+      font-size:5rem;
+      color:rgba(36,93,99,0.15);
+      top:-22px;
+      left:20px;
+    }
+
+    .quote-block p{position:relative;z-index:1;}
+
+    .check-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:8px;
+    }
+
+    .check-list li{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      font-size:0.96rem;
+    }
+
+    .check-list i{
+      color:var(--accent);
+      margin-top:4px;
+      font-size:0.85rem;
+    }
+
+    .gallery-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+    }
+
+    .gallery-row img{
+      border-radius:12px;
+      object-fit:cover;
+      flex:1 1 150px;
+      max-height:180px;
+    }
+
+    form{display:grid;gap:12px;margin-top:16px;}
+
+    label{font-size:0.9rem;font-weight:500;}
+
+    input,textarea,select{
+      width:100%;
+      padding:9px 11px;
+      border-radius:8px;
+      border:1px solid #c9c0b5;
+      font-family:inherit;
+      font-size:0.95rem;
+      background-color:#fdfaf5;
+    }
+
+    textarea{min-height:100px;resize:vertical;}
+
+    footer{
+      border-top:1px solid rgba(0,0,0,0.06);
+      padding:16px 20px 26px;
+      font-size:0.85rem;
+      color:var(--muted);
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="nav" id="topNav">
+    <div class="nav-logo">
+      <span class="nav-logo-main">Алина Алая</span>
+      <span class="nav-logo-sub">психолог · арт‑терапевт · художница</span>
+    </div>
+    <div class="nav-links">
+      <a href="#hero">Главная</a>
+      <a href="#about">Обо мне</a>
+      <a href="#therapy">Терапия творчеством</a>
+      <a href="#walks">Арт‑прогулки</a>
+      <a href="#sketching">Скетчинг и мастер‑классы</a>
+      <a href="#contacts">Контакты</a>
+      <a href="#contacts" class="nav-cta"><i class="fa-regular fa-calendar"></i>Записаться</a>
+    </div>
+    <div class="nav-toggle" onclick="toggleNav()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+</header>
+
+<main class="wrapper">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="pill">
+          <i class="fa-solid fa-leaf"></i>
+          Терапия творчеством · арт‑прогулки · скетчинг
+        </div>
+        <h1>Терапия творчеством, арт‑прогулки и скетчинг для тех, кто устал от экранов и хочет вернуться к себе</h1>
+        <p>Я соединяю психологию, искусство и природу, чтобы помочь вам снизить стресс, мягко восстановить внимание и эмоциональные ресурсы и вернуть живой интерес к миру и к себе.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="scrollToSection('contacts')">
+            <i class="fa-regular fa-calendar"></i>
+            Записаться на встречу или задать вопрос
+          </button>
+        </div>
+        <div class="hero-location">
+          <i class="fa-solid fa-location-dot"></i> Льорет‑де‑Мар · онлайн и очно
+        </div>
+      </div>
+      <div class="hero-photo">
+        <!-- основное фото в hero -->
+        <img src="IMG_E0217.jpg" alt="Алина Алая с картинами на природе">
+      </div>
+    </div>
+  </section>
+
+  <!-- Кто я -->
+  <section id="about">
+    <div class="section-header">
+      <div class="section-kicker">Обо мне</div>
+      <h2>Кто я</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:flex-start;">
+      <div>
+        <p>Меня зовут Алина Сумченко, творческий псевдоним – Алина Алая. Я психолог, арт‑терапевт и художница. Много лет я была прежде всего художницей: училась в школе при Академии художеств им. Репина в Санкт‑Петербурге, участвовала в выставках и кураторских проектах в России и Европе.</p>
+        <p>В своём искусстве я всегда возвращалась к человеку – к его телу, мифам, внутренним мирам и тому, как бессознательное проявляется через форму, ритм и цвет. Со временем стало естественно продолжить этот диалог уже в формате психологической помощи: арт‑терапия и консультирование стали продолжением моего художнического опыта, а творчество – живым инструментом в работе с человеком. Сейчас я работаю в интегративном подходе, соединяя искусство, психологию и практики работы с природой.</p>
+        <button class="btn btn-outline" onclick="scrollToSection('therapy')">
+          Узнать о терапии творчеством
+        </button>
+      </div>
+      <div>
+        <div class="gallery-row">
+          <img src="photo_2026-03-11_19-06-55.jpg" alt="Арт‑прогулка на природе">
+          <img src="IMG_1098.jpg" alt="Алина Алая с картиной в городе и природе">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Это для вас, если -->
+  <section class="bg-alt">
+    <div class="section-header">
+      <div class="section-kicker">Кому подойдёт</div>
+      <h2>Это для вас, если вы</h2>
+    </div>
+    <ul class="check-list">
+      <li><i class="fa-solid fa-check"></i><span>чувствуете усталость от экранов и информационную перегрузку;</span></li>
+      <li><i class="fa-solid fa-check"></i><span>хотите улучшить концентрацию и внимание;</span></li>
+      <li><i class="fa-solid fa-check"></i><span>чувствуете эмоциональную усталость, тревогу, выгорание, потерю интереса к жизни;</span></li>
+      <li><i class="fa-solid fa-check"></i><span>хотите стать внимательнее к эмоциям и внутреннему состоянию;</span></li>
+      <li><i class="fa-solid fa-check"></i><span>хотите лучше чувствовать своё тело и его сигналы;</span></li>
+      <li><i class="fa-solid fa-check"></i><span>интуитивно чувствуете, что вам легче говорить через образ, чем только словами.</span></li>
+    </ul>
+  </section>
+
+  <!-- Форматы работы -->
+  <section>
+    <div class="section-header">
+      <div class="section-kicker">Направления</div>
+      <h2>Форматы работы</h2>
+    </div>
+    <div class="cards-3">
+      <div class="card">
+        <h3>Терапия творчеством</h3>
+        <p>Индивидуальная психологическая работа через рисунок, коллаж, текстиль, текст и фотографии. Для тех, кто ищет мягкую, бережную поддержку и глубину.</p>
+        <button class="btn btn-outline" onclick="scrollToSection('therapy')">Подробнее</button>
+      </div>
+      <div class="card">
+        <h3>Арт‑прогулки и дневник наблюдений</h3>
+        <p>Прогулки и небольшие практики, которые помогают восстановить внимание, снизить ощущение перегрузки и вернуть живой интерес к миру вокруг.</p>
+        <button class="btn btn-outline" onclick="scrollToSection('walks')">Подробнее</button>
+      </div>
+      <div class="card">
+        <h3>Скетчинг и творческие мастер‑классы</h3>
+        <p>Скетчбук, зарисовки города и природы, интуитивная абстракция и авторские мастер‑классы без оценок и «правильно/неправильно».</p>
+        <button class="btn btn-outline" onclick="scrollToSection('sketching')">Подробнее</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Поэтичный блок -->
+  <section>
+    <div class="quote-block">
+      <p>Для меня природа – это не фон, а живой собеседник, в котором спрятаны наши корни и мифы. Когда мы выходим из экрана в ландшафт, тело постепенно вспоминает свой собственный ритм: дыхание выравнивается, шаг становится ощутимым, взгляд перестаёт скользить и начинает задерживаться на деталях. Через творчество на природе – скетчи, заметки, абстрактные пятна – человек заново выстраивает отношения с землёй и своим телом, открывая для себя более цельное, живое ощущение собственной идентичности и присутствия в мире.</p>
+    </div>
+  </section>
+
+  <!-- Терапия творчеством -->
+  <section id="therapy">
+    <div class="section-header">
+      <div class="section-kicker">Терапия творчеством</div>
+      <h2>Психологическая работа через искусство</h2>
+    </div>
+    <p>Терапия творчеством – это форма психологической работы, где мы используем художественные средства как язык для диалога с собой и своим бессознательным. Через рисунок, коллаж, текстиль, скульптуру, текст или фотографию можно выразить то, что сложно сформулировать словами, увидеть свои чувства и истории в другом свете и найти новые опоры.</p>
+    <p>В моём подходе важен не результат на бумаге, а ваш опыт: ощущения, ассоциации, символы, смыслы, которые проявляются в процессе.</p>
+
+    <h3>Для кого</h3>
+    <ul class="check-list" style="margin-bottom:20px;">
+      <li><i class="fa-regular fa-circle-dot"></i><span>вы чувствуете эмоциональную перегрузку, усталость, тревогу;</span></li>
+      <li><i class="fa-regular fa-circle-dot"></i><span>вам трудно говорить о чувствах напрямую, но легче выражать их через образ;</span></li>
+      <li><i class="fa-regular fa-circle-dot"></i><span>вы переживаете изменения, потери, кризисы и ищете мягкий способ прожить этот опыт;</span></li>
+      <li><i class="fa-regular fa-circle-dot"></i><span>вы ощущаете цифровую усталость, трудности с концентрацией и хотите восстановить внимание;</span></li>
+      <li><i class="fa-regular fa-circle-dot"></i><span>вам близки символ и метафора, и вы чувствуете внутренний запрос на творчество.</span></li>
+    </ul>
+
+    <h3>Инструменты</h3>
+    <div class="cards-3">
+      <div class="card">
+        <h3>Коллаж и образы</h3>
+        <p>Собираем фрагменты опыта в целостный визуальный образ и по‑новому видим свои состояния.</p>
+        <img src="8.jpg" alt="Стол с коллажами" style="border-radius:10px;margin-top:10px;">
+      </div>
+      <div class="card">
+        <h3>Текстиль и куклотерапия</h3>
+        <p>Работа с тканью, фактурами и фигурой помогает лучше ощущать тело, его границы и поддержку.</p>
+      </div>
+      <div class="card">
+        <h3>Объекты и скульптуры</h3>
+        <p>Создаём объёмные формы, чтобы «потрогать» своё состояние и придать ему символическую форму.</p>
+      </div>
+      <div class="card">
+        <h3>Креативное письмо и сказки</h3>
+        <p>Короткие тексты и истории дают голос внутренним частям и помогают мягко переработать переживания.</p>
+        <img src="photo_2026-03-11_19-16-51.jpg" alt="Коллаж с печатной машинкой" style="border-radius:10px;margin-top:10px;">
+      </div>
+      <div class="card">
+        <h3>Фототерапия</h3>
+        <p>Работа с личными и метафорическими фотографиями помогает по‑новому увидеть себя и пространство.</p>
+      </div>
+      <div class="card">
+        <h3>Абстракция и интуитивное рисование</h3>
+        <p>Опираемся на цвет, ритм линии и ощущения в теле, чтобы мягко выражать сложные состояния.</p>
+        <img src="45.jpg" alt="Абстрактная живопись" style="border-radius:10px;margin-top:10px;">
+      </div>
+    </div>
+
+    <h3 style="margin-top:26px;">Как проходит работа</h3>
+    <ul class="check-list">
+      <li><i class="fa-regular fa-circle-dot"></i><span>Первая встреча – знакомство, обсуждение запроса, выбор формата работы.</span></li>
+      <li><i class="fa-regular fa-circle-dot"></i><span>На сессиях мы чередуем творчество и разговор, ориентируясь на ваш темп и границы.</span></li>
+      <li><i class="fa-regular fa-circle-dot"></i><span>В конце каждой встречи мы подводим итоги и ищем, что из опыта можно забрать с собой в повседневную жизнь.</span></li>
+    </ul>
+
+    <button class="btn btn-primary" onclick="scrollToSection('contacts')" style="margin-top:18px;">
+      Записаться на встречу или задать вопрос
+    </button>
+  </section>
+
+  <!-- Арт-прогулки -->
+  <section id="walks">
+    <div class="section-header">
+      <div class="section-kicker">Арт‑прогулки</div>
+      <h2>Арт‑прогулки и творческий дневник наблюдений</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;align-items:flex-start;">
+      <div>
+        <h3>Что такое арт‑прогулка</h3>
+        <p>Арт‑прогулка – это маршрут по городу или природному пространству, где мы соединяем движение, наблюдение и простые творческие задания. Вместо привычного «пролистывания» дня мы замедляемся, замечаем детали, фиксируем их в виде скетчей и коротких записей, возвращаясь из цифрового шума к живому миру вокруг.</p>
+
+        <h3>Творческий дневник наблюдений</h3>
+        <p>«Творческий дневник наблюдений» – моя авторская методика, которая помогает вернуть вниманию глубину и устойчивость через наблюдение, рисование и короткие записи от руки.</p>
+
+        <p><strong>Примеры упражнений:</strong></p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-pen-nib"></i><span>выбрать один объект и сделать несколько быстрых скетчей с разных точек, отмечая форму, тени и фактуру;</span></li>
+          <li><i class="fa-solid fa-pen-nib"></i><span>заметить три детали, на которые вы раньше не обращали внимания, и описать их несколькими словами и линиями;</span></li>
+          <li><i class="fa-solid fa-pen-nib"></i><span>зафиксировать своё состояние «до» и «после» прогулки абстрактными пятнами и короткими фразами.</span></li>
+        </ul>
+
+        <h3 style="margin-top:20px;">Форматы</h3>
+        <ul class="check-list">
+          <li><i class="fa-regular fa-circle-dot"></i><span>Индивидуальные арт‑прогулки в Льорет‑де‑Мар и окрестностях;</span></li>
+          <li><i class="fa-regular fa-circle-dot"></i><span>Небольшие группы (по расписанию);</span></li>
+          <li><i class="fa-regular fa-circle-dot"></i><span>Онлайн‑сопровождение по дневнику наблюдений.</span></li>
+        </ul>
+
+        <button class="btn btn-primary" onclick="scrollToSection('contacts')" style="margin-top:18px;">
+          Записаться на арт‑прогулку или задать вопрос
+        </button>
+      </div>
+      <div>
+        <div class="gallery-row">
+          <img src="3.jpg" alt="Участницы арт‑прогулки с блокнотами">
+          <img src="photo_2026-03-11_18-55-32.jpg" alt="Группа на склоне у моря со скетчбуками">
+          <img src="photo_2026-03-11_18-53-58.jpg" alt="Картина на мольберте на террасе">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Скетчинг и мастер-классы -->
+  <section id="sketching">
+    <div class="section-header">
+      <div class="section-kicker">Скетчинг и мастер‑классы</div>
+      <h2>Живой скетчбук и творческие встречи</h2>
+    </div>
+    <p>Скетчинг в моей практике – это способ посмотреть на мир и на себя внимательнее, а не экзамен по «умению рисовать». Через быстрые зарисовки города, природы, вдохновляющих мест и повседневных сцен мы тренируем наблюдательность, присутствие в моменте и способность честно фиксировать на бумаге то, что откликается именно вам.</p>
+    <p>Вы научитесь переносить на бумагу интересные сюжеты и детали из повседневной жизни и сможете запечатлеть в рисунке окружающую красоту. Эти занятия не являются психотерапией, но создают поддерживающее пространство, где можно отдохнуть от оценок, вернуть творческий интерес и собрать свой живой визуальный архив.</p>
+
+    <h3 style="margin-top:22px;">Форматы скетчинга</h3>
+    <div class="cards-3">
+      <div class="card">
+        <h3>Городской скетчинг</h3>
+        <p>Прогулки по городу с быстрыми зарисовками архитектуры, людей и повседневных сцен.</p>
+        <img src="photo_2026-03-11_19-02-48.jpg" alt="Городской скетчинг с машинами и пальмами" style="border-radius:10px;margin-top:10px;">
+      </div>
+      <div class="card">
+        <h3>Скетчбук путешественника</h3>
+        <p>Скетчи в музеях, у достопримечательностей и в особых для вас местах – личная карта памяти.</p>
+        <img src="IMG_0218.jpg" alt="Скетчбук с пейзажем моря и скал" style="border-radius:10px;margin-top:10px;">
+      </div>
+      <div class="card">
+        <h3>Ботанические и природные зарисовки</h3>
+        <p>Рисование деревьев, растений и фрагментов ландшафта помогает замедлиться и ближе почувствовать природу.</p>
+        <img src="IMG_1103.jpg" alt="Скетчбук с пальмами" style="border-radius:10px;margin-top:10px;">
+      </div>
+      <div class="card">
+        <h3>Интуитивная абстракция</h3>
+        <p>Абстрактное и интуитивное рисование на основе цвета и движения руки – для исследования внутренних состояний.</p>
+        <img src="41.jpg" alt="Светлая абстракция с фактурами" style="border-radius:10px;margin-top:10px;">
+      </div>
+      <div class="card">
+        <h3>Этюды на природе</h3>
+        <p>Выразительная живопись или графика на пленэре – работа со светом, цветом и настроением места.</p>
+        <img src="IMG_1026.jpg" alt="Этюд деревьев и моря" style="border-radius:10px;margin-top:10px;">
+      </div>
+      <div class="card">
+        <h3>Индивидуальные занятия</h3>
+        <p>Занятия в мастерской или на природе: фигура человека, архитектура, ботанические зарисовки и другие темы по запросу.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:26px;">Образовательные творческие мастер‑классы</h3>
+    <ul class="check-list">
+      <li><i class="fa-solid fa-palette"></i><span><strong>Дизайн винной этикетки</strong> – авторский мастер‑класс, где мы разбираем визуальный язык на упаковке и создаём собственную этикетку от идеи до готового макета. За время занятия каждый создаст свою оригинальную этикетку как маленькое произведение искусства.</span></li>
+      <li><i class="fa-solid fa-palette"></i><span><strong>Тематические творческие встречи</strong> – сезонные и атмосферные занятия, связанные с временем года, местом и настроением (вечера скетчинга, рисование вином, арт‑встречи на природе).</span></li>
+      <li><i class="fa-solid fa-palette"></i><span><strong>Групповые коллаж‑сессии</strong> – творческие классы с коллажем и визуальными историями в безопасной, поддерживающей атмосфере.</span></li>
+    </ul>
+
+    <button class="btn btn-primary" onclick="scrollToSection('contacts')" style="margin-top:18px;">
+      Узнать о ближайших занятиях или задать вопрос
+    </button>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contacts">
+    <div class="section-header">
+      <div class="section-kicker">Контакты</div>
+      <h2>Контакты и запись</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:flex-start;">
+      <div>
+        <p>Я живу и работаю в Льорет‑де‑Мар (Коста‑Брава, Испания). Работаю очно и онлайн.</p>
+        <p>Если вам откликается мой подход, вы можете написать мне несколько строк о себе и своём запросе. Я отвечу, задам несколько уточняющих вопросов и предложу формат первой встречи или арт‑программы.</p>
+
+        <h3>Связаться со мной</h3>
+        <p><i class="fa-brands fa-telegram"></i> Telegram: <strong>@alinaalay</strong></p>
+        <p><i class="fa-solid fa-phone"></i> Телефон: <strong>+34 641 806 105</strong></p>
+
+        <h3 style="margin-top:22px;">Формат работы и оплата</h3>
+        <ul class="check-list">
+          <li><i class="fa-regular fa-circle-dot"></i><span>Формат: индивидуальные онлайн‑сессии и очные встречи в Льорет‑де‑Мар.</span></li>
+          <li><i class="fa-regular fa-circle-dot"></i><span>Длительность: обычно 1–2 часа (обсуждаем индивидуально перед началом работы).</span></li>
+          <li><i class="fa-regular fa-circle-dot"></i><span>Частота: по договорённости, в зависимости от вашего запроса и ресурсов.</span></li>
+          <li><i class="fa-regular fa-circle-dot"></i><span>Оплата: стоимость обсуждается индивидуально и сообщается по запросу.</span></li>
+        </ul>
+
+        <h3 style="margin-top:22px;">Отмена и перенос</h3>
+        <p>Если вы понимаете, что не сможете прийти на встречу, пожалуйста, сообщите об этом не позднее чем за 24 часа. При отмене позже этого срока сессия может считаться проведённой, кроме случаев форс‑мажора. Перенос возможен по договорённости на ближайшее свободное время. Если что‑то меняется, просто напишите мне – мы вместе найдём подходящее решение.</p>
+      </div>
+
+      <div>
+        <div class="card">
+          <h3>Форма записи</h3>
+          <p class="muted" style="font-size:0.9rem;">Если вы хотите записаться на встречу или задать вопрос, заполните короткую форму. Напишите пару слов о себе и о том, что сейчас для вас важно. Я отвечу вам в ближайшее время.</p>
+          <form>
+            <div>
+              <label for="name">Имя</label>
+              <input id="name" type="text" placeholder="Как к вам обращаться" />
+            </div>
+            <div>
+              <label for="city">Город / страна</label>
+              <input id="city" type="text" placeholder="Например, Льорет‑де‑Мар, Испания" />
+            </div>
+            <div>
+              <label for="contact">Способ связи (Telegram или телефон)</label>
+              <input id="contact" type="text" placeholder="@alinaalay или номер телефона" />
+            </div>
+            <div>
+              <label for="request">Кратко о вашем запросе</label>
+              <textarea id="request" placeholder="Что сейчас для вас важно, с чем вы хотели бы поработать"></textarea>
+            </div>
+            <div>
+              <label for="format">Предпочитаемый формат</label>
+              <select id="format">
+                <option>Онлайн</option>
+                <option>Очная встреча в Льорет‑де‑Мар</option>
+                <option>Пока не знаю, хочу обсудить</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Записаться на встречу или задать вопрос
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> Алина Алая · терапия творчеством, арт‑прогулки и скетчинг
+</footer>
+
+<script>
+  function toggleNav() {
+    const header = document.getElementById('topNav').parentElement;
+    header.classList.toggle('nav-open');
+  }
+
+  function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      window.scrollTo({
+        top: el.offsetTop - 70,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
