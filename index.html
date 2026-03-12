@@ -5,77 +5,59 @@
   <title>Алина Алая – терапия творчеством, арт‑прогулки и скетчинг</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Терапия творчеством, арт‑прогулки и скетчинг в Льорет‑де‑Мар и онлайн. Алина Алая – психолог, арт‑терапевт и художница." />
-  <!-- Шрифты: мягкий гротеск + теплый сериф -->
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&family=Fraunces:wght@500;600&display=swap" rel="stylesheet">
-  <!-- Иконки -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Беззасечковые шрифты, мягкий характер -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Иконки (можешь позже заменить на свои SVG) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     :root {
-      /* мягкая, некислотная палитра */
-      --bg-page: #f7f4ef;        /* основной фон */
-      --bg-panel: #ffffff;       /* карточки */
-      --bg-muted: #eef1ec;       /* мягкая подложка */
-      --text-main: #282622;
-      --text-soft: #68635c;
-      --accent: #63756b;         /* мягкий зелёно‑серый */
-      --accent-light: #9aac9f;
-      --accent-warm: #e39a7a;    /* тёплый акцент (кнопки) */
-      --border-subtle: #e0ddd6;
-      --shadow-soft: 0 14px 40px rgba(0,0,0,0.06);
-      --radius-lg: 18px;
+      /* Светлый фон, как у arttherapyinreallife.com [page:0] */
+      --bg-main: #ffffff;
+      --bg-soft: #f6f5f1;
+      --bg-chip: #eef5f3;
+      --text-main: #212121;
+      --text-muted: #7a7a7a;
+      /* Мягкий природный зелёный, менее кислотный */
+      --accent: #4f7c63;
+      --accent-soft: #9fb9a8;
+      --accent-warm: #f2cda3;
+      --border-soft: #e3dfd6;
+      --shadow-soft: 0 18px 45px rgba(0,0,0,0.06);
+      --radius-lg: 20px;
       --radius-md: 14px;
-      --radius-sm: 8px;
-      --max-width: 1040px;
+      --radius-sm: 10px;
+      --max-width: 1120px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       font-family: 'Work Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text-main);
-      background: radial-gradient(circle at top left, #fdf8f0 0, #f7f4ef 55%, #f3f2ee 100%);
-      line-height: 1.7;
+      background-color: var(--bg-main);
+      line-height: 1.6;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    img { max-width: 100%; display: block; }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
     h1, h2, h3 {
-      font-family: 'Fraunces', "Times New Roman", serif;
+      font-family: 'Nunito', system-ui, sans-serif;
       margin-top: 0;
       color: var(--text-main);
+      font-weight: 600;
     }
 
-    h1 {
-      font-size: clamp(2.2rem, 3vw, 2.8rem);
-      line-height: 1.15;
-      letter-spacing: 0.01em;
-    }
+    h1 { font-size: clamp(2rem, 3vw, 2.8rem); line-height: 1.15; letter-spacing: 0.01em; }
+    h2 { font-size: 1.9rem; margin-bottom: 0.3rem; }
+    h3 { font-size: 1.2rem; }
 
-    h2 {
-      font-size: 1.9rem;
-      margin-bottom: 0.3rem;
-    }
-
-    h3 {
-      font-size: 1.24rem;
-    }
-
-    p {
-      margin: 0 0 0.9rem;
-      font-size: 0.98rem;
-    }
+    p { margin: 0 0 0.8rem; }
 
     .wrapper {
       max-width: var(--max-width);
@@ -84,29 +66,26 @@
     }
 
     section {
-      padding: 72px 0 40px;
-      border-bottom: 1px solid var(--border-subtle);
+      padding: 80px 0 40px;
+      border-bottom: 1px solid rgba(0,0,0,0.02);
     }
 
-    .section-header {
-      margin-bottom: 24px;
-    }
+    .section-header { margin-bottom: 28px; }
 
     .section-kicker {
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
       font-size: 0.78rem;
-      color: var(--text-soft);
+      color: var(--text-muted);
       margin-bottom: 6px;
     }
 
-    /* Шапка */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background-color: rgba(247,244,239,0.96);
-      backdrop-filter: blur(10px);
+      background-color: rgba(255,255,255,0.9);
+      backdrop-filter: blur(18px);
       border-bottom: 1px solid rgba(0,0,0,0.03);
     }
 
@@ -120,315 +99,291 @@
       gap: 24px;
     }
 
-    .nav-logo {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .nav-logo-main {
-      font-family: 'Fraunces', serif;
-      font-weight: 600;
-      font-size: 1.3rem;
-      letter-spacing: 0.03em;
-    }
-
-    .nav-logo-sub {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
+    .nav-logo { display: flex; flex-direction: column; gap: 2px; }
+    .nav-logo-main { font-family: 'Nunito', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; }
+    .nav-logo-sub { font-size: 0.8rem; color: var(--text-muted); }
 
     .nav-links {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      font-size: 0.9rem;
+      display:flex;
+      gap:18px;
+      align-items:center;
+      font-size:0.9rem;
     }
 
     .nav-links a {
-      padding: 4px 0;
-      position: relative;
-      color: var(--text-soft);
-    }
-
-    .nav-links a:hover {
-      color: var(--text-main);
+      padding:6px 0;
+      position:relative;
     }
 
     .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 1.5px;
-      background-color: var(--accent);
-      transition: width 0.22s ease;
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0;
+      height:2px;
+      background-color:var(--accent);
+      transition:width 0.22s ease;
     }
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+    .nav-links a:hover::after { width:100%; }
 
     .nav-cta {
-      padding: 7px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      font-size: 0.85rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background-color: rgba(238,241,236,0.6);
+      padding:7px 14px;
+      border-radius:999px;
+      border:1px solid var(--accent);
+      color:var(--accent);
+      font-size:0.85rem;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background-color:#ffffff;
     }
 
-    .nav-toggle {
-      display: none;
-      font-size: 1.4rem;
-      cursor: pointer;
-      color: var(--text-main);
-    }
+    .nav-toggle { display:none; font-size:1.4rem; cursor:pointer; }
 
-    @media (max-width: 860px) {
-      .nav-links {
-        display: none;
-      }
-      .nav-toggle {
-        display: block;
-      }
-      .nav-open .nav-links {
-        display: flex;
-        position: absolute;
-        top: 56px;
-        right: 16px;
-        left: 16px;
-        flex-direction: column;
-        padding: 12px 16px 10px;
-        background-color: var(--bg-page);
-        border-radius: 16px;
-        box-shadow: var(--shadow-soft);
-      }
-      .nav-open .nav-links a {
-        padding: 6px 0;
+    @media (max-width:860px){
+      .nav-links{display:none;}
+      .nav-toggle{display:block;}
+      .nav-open .nav-links{
+        display:flex;
+        position:absolute;
+        top:56px;
+        right:12px;
+        left:12px;
+        flex-direction:column;
+        padding:12px 16px 10px;
+        background-color:#ffffff;
+        border-radius:16px;
+        box-shadow:var(--shadow-soft);
       }
     }
 
-    /* Кнопки */
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 11px 20px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 0.95rem;
-      font-weight: 500;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:11px 20px;
+      border-radius:999px;
+      border:none;
+      cursor:pointer;
+      font-size:0.95rem;
+      font-weight:500;
+      font-family:'Work Sans', system-ui, sans-serif;
     }
 
     .btn-primary {
-      background-color: var(--accent-warm);
-      color: #fff7f2;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+      background: linear-gradient(135deg, #4f7c63, #6e9f81);
+      color:#ffffff;
+      box-shadow:var(--shadow-soft);
     }
-
-    .btn-primary:hover {
-      background-color: #d38461;
-    }
+    .btn-primary:hover{background: linear-gradient(135deg, #446f58, #638e74);}
 
     .btn-outline {
-      background-color: transparent;
-      border: 1px solid var(--accent);
-      color: var(--accent);
+      background-color:#ffffff;
+      border:1px solid var(--accent);
+      color:var(--accent);
     }
 
-    /* HERO */
-    #hero {
-      padding-top: 80px;
+    #hero { padding-top:72px; }
+
+    .hero-inner{
+      display:grid;
+      grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+      gap:40px;
+      align-items:center;
     }
 
-    .hero-inner {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 32px;
-      align-items: center;
+    .hero-location{font-size:0.9rem;color:var(--text-muted);margin-top:10px;display:flex;align-items:center;gap:8px;}
+
+    .hero-photo-wrap{
+      position:relative;
+      padding:14px;
+      border-radius:26px;
+      background: radial-gradient(circle at 0 0, #eef5f3 0, #ffffff 55%);
+      box-shadow:var(--shadow-soft);
     }
 
-    .hero-tag {
-      font-size: 0.82rem;
-      color: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(99,117,107,0.35);
-      background-color: rgba(238,241,236,0.6);
-      margin-bottom: 10px;
+    .hero-photo-main{
+      border-radius:22px;
+      overflow:hidden;
     }
 
-    .hero-location {
-      font-size: 0.9rem;
-      color: var(--text-soft);
-      margin-top: 8px;
+    .hero-photo-tag {
+      position:absolute;
+      left:22px;
+      bottom:22px;
+      padding:6px 12px;
+      border-radius:999px;
+      background-color:rgba(255,255,255,0.9);
+      font-size:0.78rem;
+      display:flex;
+      align-items:center;
+      gap:6px;
+      color:var(--text-muted);
     }
 
-    .hero-photo {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      background-color: #e9e4da;
+    .hero-actions{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;}
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 13px;
+      border-radius:999px;
+      background-color:var(--bg-chip);
+      color:var(--accent);
+      font-size:0.78rem;
+      margin-bottom:12px;
     }
 
-    .hero-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .muted{color:var(--text-muted);}
+
+    .bg-soft{background-color:var(--bg-soft);}
+
+    .cards-3{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px;
     }
 
-    .hero-actions {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
+    .card{
+      background-color:#ffffff;
+      border-radius:var(--radius-md);
+      padding:18px 18px 16px;
+      box-shadow:0 14px 34px rgba(0,0,0,0.03);
+      border:1px solid rgba(0,0,0,0.02);
     }
 
-    @media (max-width: 860px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-      }
+    .card h3{margin-bottom:6px;}
+    .card p{font-size:0.94rem;}
+
+    .card-tag-icon{
+      width:32px;
+      height:32px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:10px;
+      font-size:0.9rem;
+      color:var(--accent);
+      background: radial-gradient(circle at 0 0, #eef5f3 0, #ffffff 70%);
     }
 
-    .muted {
-      color: var(--text-soft);
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr;}
+      .cards-3{grid-template-columns:1fr;}
     }
 
-    .bg-muted {
-      background-color: var(--bg-muted);
+    .quote-block{
+      background: radial-gradient(circle at 0 0, #eef5f3 0, #ffffff 60%);
+      border-radius:var(--radius-lg);
+      padding:32px 28px;
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(0,0,0,0.03);
     }
 
-    .cards-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
+    .quote-block::before{
+      content:"“";
+      position:absolute;
+      font-family:'Nunito',system-ui,sans-serif;
+      font-size:5rem;
+      color:rgba(79,124,99,0.13);
+      top:-22px;
+      left:20px;
     }
 
-    .card {
-      background-color: var(--bg-panel);
-      border-radius: var(--radius-md);
-      padding: 20px 18px 18px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.04);
-      border: 1px solid #ebe7df;
+    .quote-block p{position:relative;z-index:1;}
+
+    .check-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:10px;
     }
 
-    .card h3 {
-      margin-bottom: 6px;
+    .check-list li{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      font-size:0.96rem;
     }
 
-    .card p {
-      font-size: 0.95rem;
+    .check-list i{
+      color:var(--accent);
+      margin-top:4px;
+      font-size:0.9rem;
     }
 
-    @media (max-width: 900px) {
-      .cards-3 {
-        grid-template-columns: 1fr;
-      }
+    .gallery-row{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:10px;
+      margin-top:16px;
     }
 
-    .quote-block {
-      background: linear-gradient(135deg, #eef1ec, #f5efe8);
-      border-radius: var(--radius-lg);
-      padding: 30px 26px;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(152,166,157,0.35);
+    .gallery-row img{
+      border-radius:16px;
+      object-fit:cover;
+      max-height:220px;
+      width:100%;
     }
 
-    .quote-block::before {
-      content: "“";
-      position: absolute;
-      font-family: 'Fraunces', serif;
-      font-size: 4.6rem;
-      color: rgba(99,117,107,0.16);
-      top: -10px;
-      left: 16px;
+    .gallery-row.tall-3{
+      grid-template-columns:repeat(3,minmax(0,1fr));
     }
 
-    .quote-block p {
-      position: relative;
-      z-index: 1;
-      font-size: 0.98rem;
+    .gallery-row-vertical{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
     }
 
-    .check-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 8px;
+    form{display:grid;gap:12px;margin-top:16px;}
+
+    label{font-size:0.9rem;font-weight:500;}
+
+    input,textarea,select{
+      width:100%;
+      padding:9px 11px;
+      border-radius:10px;
+      border:1px solid var(--border-soft);
+      font-family:inherit;
+      font-size:0.95rem;
+      background-color:#fbfaf8;
     }
 
-    .check-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.96rem;
+    textarea{min-height:100px;resize:vertical;}
+
+    footer{
+      border-top:1px solid rgba(0,0,0,0.06);
+      padding:16px 20px 26px;
+      font-size:0.85rem;
+      color:var(--text-muted);
+      text-align:center;
+      background-color:#ffffff;
     }
 
-    .check-list i {
-      color: var(--accent);
-      margin-top: 4px;
-      font-size: 0.85rem;
+    /* Внутренние страницы (якоря как «страницы») */
+    .intro-break {
+      display:grid;
+      grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
+      gap:28px;
+      align-items:flex-start;
+      padding:24px 22px;
+      border-radius:var(--radius-lg);
+      background: radial-gradient(circle at 0 0, #eef5f3 0, #ffffff 70%);
+      border:1px solid rgba(0,0,0,0.03);
+      margin-top:32px;
     }
 
-    .gallery-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .gallery-row img {
-      border-radius: 14px;
-      object-fit: cover;
-      flex: 1 1 150px;
-      max-height: 190px;
-    }
-
-    form {
-      display: grid;
-      gap: 12px;
-      margin-top: 16px;
-    }
-
-    label {
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 9px 11px;
-      border-radius: 8px;
-      border: 1px solid #d6d0c7;
-      font-family: inherit;
-      font-size: 0.95rem;
-      background-color: #fbf8f3;
-    }
-
-    textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
-
-    footer {
-      border-top: 1px solid var(--border-subtle);
-      padding: 16px 20px 26px;
-      font-size: 0.85rem;
-      color: var(--text-soft);
-      text-align: center;
+    @media(max-width:820px){
+      .intro-break{grid-template-columns:1fr;}
+      .gallery-row.tall-3{grid-template-columns:repeat(2,minmax(0,1fr));}
     }
   </style>
 </head>
@@ -442,11 +397,11 @@
     <div class="nav-links">
       <a href="#hero">Главная</a>
       <a href="#about">Обо мне</a>
-      <a href="#therapy">Терапия творчеством</a>
+      <a href="#therapy">Терапия</a>
       <a href="#walks">Арт‑прогулки</a>
-      <a href="#sketching">Скетчинг и мастер‑классы</a>
+      <a href="#sketching">Скетчинг</a>
       <a href="#contacts">Контакты</a>
-      <a href="#contacts" class="nav-cta"><i class="fa-regular fa-calendar"></i> Записаться</a>
+      <a href="#contacts" class="nav-cta"><i class="fa-regular fa-calendar"></i>Записаться</a>
     </div>
     <div class="nav-toggle" onclick="toggleNav()">
       <i class="fa-solid fa-bars"></i>
@@ -456,57 +411,91 @@
 
 <main class="wrapper">
 
-  <!-- HERO -->
+  <!-- ГЛАВНАЯ / HERO -->
   <section id="hero">
     <div class="hero-inner">
       <div>
-        <div class="hero-tag">
+        <div class="pill">
           <i class="fa-solid fa-leaf"></i>
-          терапия творчеством · арт‑прогулки · скетчинг
+          Терапия творчеством · арт‑прогулки · скетчинг
         </div>
-        <h1>Терапия творчеством, арт‑прогулки и скетчинг для тех, кто устал от экранов и хочет вернуться к себе</h1>
-        <p>Я соединяю психологию, искусство и природу, чтобы помочь вам снизить стресс, мягко восстановить внимание и эмоциональные ресурсы и вернуть живой интерес к миру и к себе.</p>
+        <h1>Творчество, природа и терапия для тех, кто устал от экранов и хочет вернуться к себе</h1>
+        <p>Я соединяю психологию, искусство и живой ландшафт, чтобы помочь вам снизить стресс, восстановить внимание и вернуть интерес к миру и к себе без гонки и оценок.</p>
         <div class="hero-actions">
-          <button class="btn btn-primary" onclick="scrollToSection('contacts')">
+          <button class="btn btn-primary" onclick="scrollToSection('therapy')">
+            <i class="fa-regular fa-sparkles"></i>
+            Посмотреть форматы работы
+          </button>
+          <button class="btn btn-outline" onclick="scrollToSection('contacts')">
             <i class="fa-regular fa-calendar"></i>
-            Записаться на встречу или задать вопрос
+            Записаться или задать вопрос
           </button>
         </div>
         <div class="hero-location">
-          <i class="fa-solid fa-location-dot"></i> Льорет‑де‑Мар · онлайн и очно
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Льорет‑де‑Мар · онлайн и очно</span>
         </div>
       </div>
-      <div class="hero-photo">
-        <img src="IMG_E0217.jpg" alt="Алина Алая с картинами на природе">
+
+      <div class="hero-photo-wrap">
+        <!-- hero: портрет + природа (IMG_E0217) -->
+        <div class="hero-photo-main">
+          <!-- Фото №1: IMG_E0217.jpg -->
+          <img src="IMG_E0217.jpg" alt="Алина Алая с картинами на природе">
+        </div>
+        <div class="hero-photo-tag">
+          <i class="fa-regular fa-heart"></i>
+          пространство творчества и заботы о себе
+        </div>
+      </div>
+    </div>
+
+    <!-- Маленький «вводный» блок как на референсе [page:0] -->
+    <div class="intro-break">
+      <div>
+        <h3>Главная страница — мягкое введение</h3>
+        <p>Здесь вы можете почувствовать общий ритм моей работы: соединение творчества, природы и психологической поддержки. Остальные разделы раскрывают терапию творчеством, арт‑прогулки и скетчинг подробнее.</p>
+        <p class="muted">Выберите то, что откликается, или просто начните с короткого письма о себе — мы вместе подберём формат.</p>
+      </div>
+      <div class="gallery-row-vertical">
+        <!-- Вводная пара кадров: город+природа (например, 3 и photo_2026-03-11_18-55-32) -->
+        <!-- Фото №2: 3.jpg -->
+        <img src="3.jpg" alt="">
+        <!-- Фото №3: photo_2026-03-11_18-55-32.jpg -->
+        <img src="photo_2026-03-11_18-55-32.jpg" alt="">
       </div>
     </div>
   </section>
 
-  <!-- Кто я -->
+  <!-- ОБО МНЕ -->
   <section id="about">
     <div class="section-header">
       <div class="section-kicker">Обо мне</div>
-      <h2>Кто я</h2>
+      <h2>Кто я и как работаю</h2>
     </div>
-    <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:flex-start;">
+    <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px;align-items:flex-start;">
       <div>
         <p>Меня зовут Алина Сумченко, творческий псевдоним – Алина Алая. Я психолог, арт‑терапевт и художница. Много лет я была прежде всего художницей: училась в школе при Академии художеств им. Репина в Санкт‑Петербурге, участвовала в выставках и кураторских проектах в России и Европе.</p>
-        <p>В своём искусстве я всегда возвращалась к человеку – к его телу, мифам, внутренним мирам и тому, как бессознательное проявляется через форму, ритм и цвет. Со временем стало естественно продолжить этот диалог уже в формате психологической помощи: арт‑терапия и консультирование стали продолжением моего художнического опыта, а творчество – живым инструментом в работе с человеком. Сейчас я работаю в интегративном подходе, соединяя искусство, психологию и практики работы с природой.</p>
+        <p>В своём искусстве я возвращаюсь к человеку – его телу, мифам, внутренним мирам и тому, как бессознательное проявляется через форму, ритм и цвет. Терапия творчеством стала естественным продолжением этого пути: я опираюсь на художественный опыт, психологию и практики работы с природой.</p>
+        <p>В работе для меня важны безопасное пространство, уважение к вашему темпу и мягкое исследование через образ, метафору и тело.</p>
         <button class="btn btn-outline" onclick="scrollToSection('therapy')">
           Узнать о терапии творчеством
         </button>
       </div>
       <div>
         <div class="gallery-row">
-          <img src="photo_2026-03-11_19-06-55-2.jpg" alt="Групповая творческая работа с коллажами">
-          <img src="IMG_1098.jpg" alt="Алина Алая с картиной в городе и природе">
+          <!-- Пара кадров, где ты и искусство рядом: photo_2026-03-11_19-06-55 + IMG_1098 -->
+          <!-- Фото №4: photo_2026-03-11_19-06-55.jpg -->
+          <img src="photo_2026-03-11_19-06-55.jpg" alt="">
+          <!-- Фото №5: IMG_1098.jpg -->
+          <img src="IMG_1098.jpg" alt="">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Это для вас, если -->
-  <section class="bg-muted">
+  <!-- ЭТО ДЛЯ ВАС, ЕСЛИ -->
+  <section class="bg-soft">
     <div class="section-header">
       <div class="section-kicker">Кому подойдёт</div>
       <h2>Это для вас, если вы</h2>
@@ -514,61 +503,64 @@
     <ul class="check-list">
       <li><i class="fa-solid fa-check"></i><span>чувствуете усталость от экранов и информационную перегрузку;</span></li>
       <li><i class="fa-solid fa-check"></i><span>хотите улучшить концентрацию и внимание;</span></li>
-      <li><i class="fa-solid fa-check"></i><span>чувствуете эмоциональную усталость, тревогу, выгорание, потерю интереса к жизни;</span></li>
-      <li><i class="fa-solid fa-check"></i><span>хотите стать внимательнее к эмоциям и внутреннему состоянию;</span></li>
-      <li><i class="fa-solid fa-check"></i><span>хотите лучше чувствовать своё тело и его сигналы;</span></li>
-      <li><i class="fa-solid fa-check"></i><span>интуитивно чувствуете, что вам легче говорить через образ, чем только словами.</span></li>
+      <li><i class="fa-solid fa-check"></i><span>переживаете эмоциональную усталость, тревогу, выгорание, потерю интереса;</span></li>
+      <li><i class="fa-solid fa-check"></i><span>хотите внимательнее относиться к своим эмоциям и внутреннему состоянию;</span></li>
+      <li><i class="fa-solid fa-check"></i><span>хотите лучше чувствовать тело и его сигналы;</span></li>
+      <li><i class="fa-solid fa-check"></i><span>замечаете, что вам легче говорить через образ, чем только словами.</span></li>
     </ul>
   </section>
 
-  <!-- Форматы работы -->
-  <section>
+  <!-- ФОРМАТЫ РАБОТЫ -->
+  <section id="formats">
     <div class="section-header">
       <div class="section-kicker">Направления</div>
       <h2>Форматы работы</h2>
     </div>
     <div class="cards-3">
       <div class="card">
+        <div class="card-tag-icon"><i class="fa-solid fa-sparkles"></i></div>
         <h3>Терапия творчеством</h3>
-        <p>Индивидуальная психологическая работа через рисунок, коллаж, текстиль, текст и фотографии. Для тех, кто ищет мягкую, бережную поддержку и глубину.</p>
+        <p>Индивидуальная психологическая работа через рисунок, коллаж, текстиль, текст и фотографии для тех, кто ищет мягкую, бережную поддержку и глубину.</p>
         <button class="btn btn-outline" onclick="scrollToSection('therapy')">Подробнее</button>
       </div>
       <div class="card">
+        <div class="card-tag-icon"><i class="fa-solid fa-person-walking"></i></div>
         <h3>Арт‑прогулки и дневник наблюдений</h3>
         <p>Прогулки и небольшие практики, которые помогают восстановить внимание, снизить ощущение перегрузки и вернуть живой интерес к миру вокруг.</p>
         <button class="btn btn-outline" onclick="scrollToSection('walks')">Подробнее</button>
       </div>
       <div class="card">
-        <h3>Скетчинг и творческие мастер‑классы</h3>
-        <p>Скетчбук, зарисовки города и природы, интуитивная абстракция и авторские мастер‑классы без оценок.</p>
+        <div class="card-tag-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <h3>Скетчинг и мастер‑классы</h3>
+        <p>Скетчбук, зарисовки города и природы, интуитивная абстракция и авторские мастер‑классы без оценок и «правильно/неправильно».</p>
         <button class="btn btn-outline" onclick="scrollToSection('sketching')">Подробнее</button>
       </div>
     </div>
   </section>
 
-  <!-- Поэтичный блок -->
+  <!-- ПОЭТИЧНЫЙ БЛОК -->
   <section>
     <div class="quote-block">
-      <p>Для меня природа – это не фон, а живой собеседник, в котором спрятаны наши корни и мифы. Когда мы выходим из экрана в ландшафт, тело постепенно вспоминает свой собственный ритм: дыхание выравнивается, шаг становится ощутимым, взгляд перестаёт скользить и начинает задерживаться на деталях. Через творчество на природе – скетчи, заметки, абстрактные пятна – человек заново выстраивает отношения с землёй и своим телом, открывая для себя более цельное, живое ощущение собственной идентичности и присутствия в мире.</p>
+      <p>Для меня природа – это не фон, а живой собеседник, в котором спрятаны наши корни и мифы. Когда мы выходим из экрана в ландшафт, тело постепенно вспоминает свой ритм: дыхание выравнивается, шаг становится ощутимым, взгляд перестаёт скользить и задерживается на деталях. Через творчество на природе – скетчи, заметки, абстрактные пятна – человек заново выстраивает отношения с землёй и своим телом, открывая более цельное ощущение своей идентичности и присутствия в мире.</p>
     </div>
   </section>
 
-  <!-- Терапия творчеством -->
+  <!-- ТЕРАПИЯ ТВОРЧЕСТВОМ -->
   <section id="therapy">
     <div class="section-header">
       <div class="section-kicker">Терапия творчеством</div>
       <h2>Психологическая работа через искусство</h2>
     </div>
-    <p>Терапия творчеством – это форма психологической работы, где мы используем художественные средства как язык для диалога с собой и своим бессознательным. Через рисунок, коллаж, текстиль, скульптуру, текст или фотографию можно выразить то, что сложно сформулировать словами, увидеть свои чувства и истории в другом свете и найти новые опоры.</p>
-    <p>В моём подходе важен не результат на бумаге, а ваш опыт: ощущения, ассоциации, символы, смыслы, которые проявляются в процессе.</p>
+    <p>Терапия творчеством – это форма психологической работы, где художественные средства становятся языком для диалога с собой и бессознательным. Через рисунок, коллаж, текстиль, скульптуру, текст или фотографию можно выразить то, что сложно сказать словами, увидеть свои истории в новом свете и найти опоры.</p>
+    <p>В моём подходе важен не результат на бумаге, а ваш опыт: ощущения, ассоциации, символы и смыслы, которые проявляются в процессе.</p>
 
     <h3>Для кого</h3>
     <ul class="check-list" style="margin-bottom:20px;">
-      <li><i class="fa-regular fa-circle-dot"></i><span>вы чувствуете эмоциональную перегрузку, усталость, тревогу;</span></li>
-      <li><i class="fa-regular fa-circle-dot"></i><span>вам трудно говорить о чувствах напрямую, но легче выражать их через образ;</span></li>
-      <li><i class="fa-regular fa-circle-dot"></i><span>вы переживаете изменения, потери, кризисы и ищете мягкий способ прожить этот опыт;</span></li>
-      <li><i class="fa-regular fa-circle-dot"></i><span>вы ощущаете цифровую усталость, трудности с концентрацией и хотите восстановить внимание;</span></li>
-      <li><i class="fa-regular fa-circle-dot"></i><span>вам близки символ и метафора, и вы чувствуете внутренний запрос на творчество.</span></li>
+      <li><i class="fa-regular fa-circle-dot"></i><span>если вы чувствуете эмоциональную перегрузку, усталость, тревогу;</span></li>
+      <li><i class="fa-regular fa-circle-dot"></i><span>если вам сложно говорить о чувствах напрямую, но легче выражать их через образ;</span></li>
+      <li><i class="fa-regular fa-circle-dot"></i><span>если вы переживаете изменения, потери, кризисы и ищете мягкий способ прожить этот опыт;</span></li>
+      <li><i class="fa-regular fa-circle-dot"></i><span>если вы ощущаете цифровую усталость, трудности с концентрацией и хотите восстановить внимание;</span></li>
+      <li><i class="fa-regular fa-circle-dot"></i><span>если вам близки символ и метафора, и вы чувствуете внутренний запрос на творчество.</span></li>
     </ul>
 
     <h3>Инструменты</h3>
@@ -576,7 +568,8 @@
       <div class="card">
         <h3>Коллаж и образы</h3>
         <p>Собираем фрагменты опыта в целостный визуальный образ и по‑новому видим свои состояния.</p>
-        <img src="8.jpg" alt="Стол с коллажами" style="border-radius:10px;margin-top:10px;">
+        <!-- Фото №6: 8.jpg — стол с коллажами рядом с текстом про коллаж -->
+        <img src="8.jpg" alt="" style="border-radius:12px;margin-top:10px;">
       </div>
       <div class="card">
         <h3>Текстиль и куклотерапия</h3>
@@ -589,7 +582,8 @@
       <div class="card">
         <h3>Креативное письмо и сказки</h3>
         <p>Короткие тексты и истории дают голос внутренним частям и помогают мягко переработать переживания.</p>
-        <img src="photo_2026-03-11_19-16-51.jpg" alt="Коллаж с печатной машинкой" style="border-radius:10px;margin-top:10px;">
+        <!-- Фото №7: photo_2026-03-11_19-16-51.jpg — рядом с текстом про письмо -->
+        <img src="photo_2026-03-11_19-16-51.jpg" alt="" style="border-radius:12px;margin-top:10px;">
       </div>
       <div class="card">
         <h3>Фототерапия</h3>
@@ -598,15 +592,16 @@
       <div class="card">
         <h3>Абстракция и интуитивное рисование</h3>
         <p>Опираемся на цвет, ритм линии и ощущения в теле, чтобы мягко выражать сложные состояния.</p>
-        <img src="41.jpg" alt="Светлая абстракция" style="border-radius:10px;margin-top:10px;">
+        <!-- Фото №8: 45.jpg — абстракция рядом с абстракцией -->
+        <img src="45.jpg" alt="" style="border-radius:12px;margin-top:10px;">
       </div>
     </div>
 
-    <h3 style="margin-top:26px;">Как проходит работа</h3>
+    <h3 style="margin-top:28px;">Как проходит работа</h3>
     <ul class="check-list">
       <li><i class="fa-regular fa-circle-dot"></i><span>Первая встреча – знакомство, обсуждение запроса, выбор формата работы.</span></li>
-      <li><i class="fa-regular fa-circle-dot"></i><span>На сессиях мы чередуем творчество и разговор, ориентируясь на ваш темп и границы.</span></li>
-      <li><i class="fa-regular fa-circle-dot"></i><span>В конце каждой встречи мы подводим итоги и ищем, что из опыта можно забрать с собой в повседневную жизнь.</span></li>
+      <li><i class="fa-regular fa-circle-dot"></i><span>На сессиях мы чередуем творчество и разговор, опираясь на ваш темп и границы.</span></li>
+      <li><i class="fa-regular fa-circle-dot"></i><span>В конце каждой встречи мы подводим итоги и смотрим, что можно забрать с собой в повседневную жизнь.</span></li>
     </ul>
 
     <button class="btn btn-primary" onclick="scrollToSection('contacts')" style="margin-top:18px;">
@@ -614,7 +609,7 @@
     </button>
   </section>
 
-  <!-- Арт-прогулки -->
+  <!-- АРТ-ПРОГУЛКИ -->
   <section id="walks">
     <div class="section-header">
       <div class="section-kicker">Арт‑прогулки</div>
@@ -623,12 +618,12 @@
     <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;align-items:flex-start;">
       <div>
         <h3>Что такое арт‑прогулка</h3>
-        <p>Арт‑прогулка – это маршрут по городу или природному пространству, где мы соединяем движение, наблюдение и простые творческие задания. Вместо привычного «пролистывания» дня мы замедляемся, замечаем детали, фиксируем их в виде скетчей и коротких записей, возвращаясь из цифрового шума к живому миру вокруг.</p>
+        <p>Арт‑прогулка – это маршрут по городу или природному пространству, где мы соединяем движение, наблюдение и простые творческие задания. Вместо привычного «пролистывания» дня мы замедляемся, замечаем детали и фиксируем их в виде скетчей и коротких записей, возвращаясь из цифрового шума к живому миру вокруг.</p>
 
         <h3>Творческий дневник наблюдений</h3>
         <p>«Творческий дневник наблюдений» – моя авторская методика, которая помогает вернуть вниманию глубину и устойчивость через наблюдение, рисование и короткие записи от руки.</p>
 
-        <p><strong>Примеры упражнений:</strong></p>
+        <p><span style="font-weight:600;">Примеры упражнений:</span></p>
         <ul class="check-list">
           <li><i class="fa-solid fa-pen-nib"></i><span>выбрать один объект и сделать несколько быстрых скетчей с разных точек, отмечая форму, тени и фактуру;</span></li>
           <li><i class="fa-solid fa-pen-nib"></i><span>заметить три детали, на которые вы раньше не обращали внимания, и описать их несколькими словами и линиями;</span></li>
@@ -647,62 +642,71 @@
         </button>
       </div>
       <div>
-        <div class="gallery-row">
-          <img src="3.jpg" alt="Участницы арт‑прогулки с блокнотами">
-          <img src="photo_2026-03-11_18-55-32.jpg" alt="Группа на склоне у моря со скетчбуками">
-          <img src="photo_2026-03-11_18-53-58.jpg" alt="Картина на мольберте на террасе">
+        <!-- Здесь прямо про прогулки: люди, блокноты, море -->
+        <div class="gallery-row tall-3">
+          <!-- Фото №9: 3.jpg — участницы с блокнотами (если другое — замени на правильный файл) -->
+          <img src="3.jpg" alt="">
+          <!-- Фото №10: photo_2026-03-11_18-55-32.jpg -->
+          <img src="photo_2026-03-11_18-55-32.jpg" alt="">
+          <!-- Фото №11: photo_2026-03-11_18-53-58.jpg -->
+          <img src="photo_2026-03-11_18-53-58.jpg" alt="">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Скетчинг и мастер-классы -->
+  <!-- СКЕТЧИНГ И МАСТЕР-КЛАССЫ -->
   <section id="sketching">
     <div class="section-header">
       <div class="section-kicker">Скетчинг и мастер‑классы</div>
       <h2>Живой скетчбук и творческие встречи</h2>
     </div>
-    <p>Скетчинг в моей практике – это способ посмотреть на мир и на себя внимательнее, а не экзамен по «умению рисовать». Через быстрые зарисовки города, природы, вдохновляющих мест и повседневных сцен мы тренируем наблюдательность, присутствие в моменте и способность честно фиксировать на бумаге то, что откликается именно вам.</p>
-    <p>Вы научитесь переносить на бумагу интересные сюжеты и детали из повседневной жизни и сможете запечатлеть в рисунке окружающую красоту. Эти занятия не являются психотерапией, но создают поддерживающее пространство, где можно отдохнуть от оценок, вернуть творческий интерес и собрать свой живой визуальный архив.</p>
+    <p>Скетчинг в моей практике – способ смотреть на мир и на себя внимательнее, а не экзамен по умению рисовать. Через быстрые зарисовки города, природы и повседневных сцен мы тренируем наблюдательность, присутствие в моменте и честную фиксацию того, что откликается именно вам.</p>
+    <p>Эти занятия не являются психотерапией, но создают поддерживающее пространство, где можно отдохнуть от оценок, вернуть творческий интерес и собрать живой визуальный архив.</p>
 
     <h3 style="margin-top:22px;">Форматы скетчинга</h3>
     <div class="cards-3">
       <div class="card">
         <h3>Городской скетчинг</h3>
         <p>Прогулки по городу с быстрыми зарисовками архитектуры, людей и повседневных сцен.</p>
-        <img src="photo_2026-03-11_19-02-48.jpg" alt="Городской скетчинг с машинами и пальмами" style="border-radius:10px;margin-top:10px;">
+        <!-- Фото №12: photo_2026-03-11_19-02-48.jpg -->
+        <img src="photo_2026-03-11_19-02-48.jpg" alt="" style="border-radius:12px;margin-top:10px;">
       </div>
       <div class="card">
         <h3>Скетчбук путешественника</h3>
         <p>Скетчи в музеях, у достопримечательностей и в особых для вас местах – личная карта памяти.</p>
-        <img src="IMG_0218.jpg" alt="Скетчбук с пейзажем моря и скал" style="border-radius:10px;margin-top:10px;">
+        <!-- Фото №13: IMG_0218.jpg -->
+        <img src="IMG_0218.jpg" alt="" style="border-radius:12px;margin-top:10px;">
       </div>
       <div class="card">
         <h3>Ботанические и природные зарисовки</h3>
         <p>Рисование деревьев, растений и фрагментов ландшафта помогает замедлиться и ближе почувствовать природу.</p>
-        <img src="IMG_1103.jpg" alt="Скетчбук с пальмами" style="border-radius:10px;margin-top:10px;">
+        <!-- Фото №14: IMG_1103.jpg -->
+        <img src="IMG_1103.jpg" alt="" style="border-radius:12px;margin-top:10px;">
       </div>
       <div class="card">
         <h3>Интуитивная абстракция</h3>
-        <p>Абстрактное и интуитивное рисование на основе цвета и движения руки – для исследования внутренних состояний.</p>
-        <img src="45.jpg" alt="Абстрактная живопись" style="border-radius:10px;margin-top:10px;">
+        <p>Абстрактное и интуитивное рисование на основе цвета и движения руки для исследования внутренних состояний.</p>
+        <!-- Фото №15: 41.jpg -->
+        <img src="41.jpg" alt="" style="border-radius:12px;margin-top:10px;">
       </div>
       <div class="card">
         <h3>Этюды на природе</h3>
         <p>Выразительная живопись или графика на пленэре – работа со светом, цветом и настроением места.</p>
-        <img src="IMG_1026.jpg" alt="Этюд деревьев и моря" style="border-radius:10px;margin-top:10px;">
+        <!-- Фото №16: IMG_1026.jpg -->
+        <img src="IMG_1026.jpg" alt="" style="border-radius:12px;margin-top:10px;">
       </div>
       <div class="card">
         <h3>Индивидуальные занятия</h3>
-        <p>Занятия в мастерской или на природе: фигура человека, архитектура, ботанические зарисовки и другие темы по запросу.</p>
+        <p>Занятия в мастерской или на природе: фигура человека, архитектура, ботаника и другие темы по запросу.</p>
       </div>
     </div>
 
     <h3 style="margin-top:26px;">Образовательные творческие мастер‑классы</h3>
     <ul class="check-list">
-      <li><i class="fa-solid fa-palette"></i><span><strong>Дизайн винной этикетки</strong> – авторский мастер‑класс, где мы разбираем визуальный язык на упаковке и создаём собственную этикетку от идеи до готового макета. За время занятия каждый создаст свою оригинальную этикетку как маленькое произведение искусства.</span></li>
-      <li><i class="fa-solid fa-palette"></i><span><strong>Тематические творческие встречи</strong> – сезонные и атмосферные занятия, связанные с временем года, местом и настроением (вечера скетчинга, рисование вином, арт‑встречи на природе).</span></li>
-      <li><i class="fa-solid fa-palette"></i><span><strong>Групповые коллаж‑сессии</strong> – творческие классы с коллажем и визуальными историями в безопасной, поддерживающей атмосфере.</span></li>
+      <li><i class="fa-solid fa-palette"></i><span><span style="font-weight:600;">Дизайн винной этикетки</span> – авторский мастер‑класс о визуальном языке упаковки и создании собственной этикетки от идеи до макета.</span></li>
+      <li><i class="fa-solid fa-palette"></i><span><span style="font-weight:600;">Тематические творческие встречи</span> – сезонные занятия, связанные с временем года, местом и настроением (вечера скетчинга, рисование вином, арт‑встречи на природе).</span></li>
+      <li><i class="fa-solid fa-palette"></i><span><span style="font-weight:600;">Групповые коллаж‑сессии</span> – занятия с коллажем и визуальными историями в безопасной, поддерживающей атмосфере.</span></li>
     </ul>
 
     <button class="btn btn-primary" onclick="scrollToSection('contacts')" style="margin-top:18px;">
@@ -710,7 +714,7 @@
     </button>
   </section>
 
-  <!-- Контакты -->
+  <!-- КОНТАКТЫ -->
   <section id="contacts">
     <div class="section-header">
       <div class="section-kicker">Контакты</div>
@@ -719,11 +723,11 @@
     <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:flex-start;">
       <div>
         <p>Я живу и работаю в Льорет‑де‑Мар (Коста‑Брава, Испания). Работаю очно и онлайн.</p>
-        <p>Если вам откликается мой подход, вы можете написать мне несколько строк о себе и своём запросе. Я отвечу, задам несколько уточняющих вопросов и предложу формат первой встречи или арт‑программы.</p>
+        <p>Если вам откликается мой подход, напишите несколько строк о себе и своём запросе. Я отвечу, задам уточняющие вопросы и предложу формат первой встречи или арт‑программы.</p>
 
         <h3>Связаться со мной</h3>
-        <p><i class="fa-brands fa-telegram"></i> Telegram: <strong>@alinaalay</strong></p>
-        <p><i class="fa-solid fa-phone"></i> Телефон: <strong>+34 641 806 105</strong></p>
+        <p><i class="fa-brands fa-telegram"></i> Telegram: <span style="font-weight:600;">@alinaalay</span></p>
+        <p><i class="fa-solid fa-phone"></i> Телефон: <span style="font-weight:600;">+34 641 806 105</span></p>
 
         <h3 style="margin-top:22px;">Формат работы и оплата</h3>
         <ul class="check-list">
@@ -734,13 +738,13 @@
         </ul>
 
         <h3 style="margin-top:22px;">Отмена и перенос</h3>
-        <p>Если вы понимаете, что не сможете прийти на встречу, пожалуйста, сообщите об этом не позднее чем за 24 часа. При отмене позже этого срока сессия может считаться проведённой, кроме случаев форс‑мажора. Перенос возможен по договорённости на ближайшее свободное время. Если что‑то меняется, просто напишите мне – мы вместе найдём подходящее решение.</p>
+        <p>Если вы понимаете, что не сможете прийти на встречу, пожалуйста, сообщите об этом не позднее чем за 24 часа. При отмене позже этого срока сессия может считаться проведённой, кроме случаев форс‑мажора. Перенос возможен по договорённости на ближайшее свободное время.</p>
       </div>
 
       <div>
         <div class="card">
           <h3>Форма записи</h3>
-          <p class="muted" style="font-size:0.9rem;">Если вы хотите записаться на встречу или задать вопрос, заполните короткую форму. Напишите пару слов о себе и о том, что сейчас для вас важно. Я отвечу вам в ближайшее время.</p>
+          <p class="muted" style="font-size:0.9rem;">Если вы хотите записаться на встречу или задать вопрос, заполните короткую форму. Напишите пару слов о себе и о том, что сейчас для вас важно.</p>
           <form>
             <div>
               <label for="name">Имя</label>
